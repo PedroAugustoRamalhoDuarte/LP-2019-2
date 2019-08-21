@@ -37,3 +37,12 @@ f s 0 | sales 0 == s = 1
 
 f s n | (sales n == s) && (n > 0) = 1 + f s (n-1)
       | (sales n /= s) && (n > 0) = f s (n-1)
+
+-- Defina uma função que gera uma string com n espaços -- 
+makeSpaces :: Int -> String
+makeSpaces n | n == 0 = ""
+             | n > 0 = " " ++ makeSpaces(n-1)
+
+-- Defina uma função que acrescenta espaços no começo da string usando pushRight --
+pushRight :: Int -> String -> String
+pushRight n string = makeSpaces n ++ string
