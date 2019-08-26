@@ -15,3 +15,8 @@ digits (a:as) | a >= '0' && a <= '9' = a : digits as
 sumPairs :: [(Int, Int)] -> [Int]
 sumPairs [] = []
 sumPairs ((x,y):as) = x + y : sumPairs as
+
+zipp :: [t] -> [u] -> [(t,u)]
+zipp (a:as) (b:bs) = (a,b):zip as bs
+zipp _ [] = []
+zipp [] _ = []
