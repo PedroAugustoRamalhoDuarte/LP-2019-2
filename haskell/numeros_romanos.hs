@@ -6,6 +6,7 @@ intToRomano x | x > 4000 = "limite para conversão 3999"
               | x >= 500 = "D" ++ intToRomano (x - 500)
               | x >= 400 = "CD" ++ intToRomano (x - 400)
               | x >= 100 = "C" ++ intToRomano (x - 100)
+              | x >= 90 = "XC" ++ intToRomano (x - 90)
               | x >= 50 = "L" ++ intToRomano (x - 50)
               | x >= 40 = "XL" ++ intToRomano (x - 40)
               | x >= 10 = "X" ++ intToRomano (x - 10)

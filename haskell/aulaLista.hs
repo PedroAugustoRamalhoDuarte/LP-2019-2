@@ -20,3 +20,7 @@ zipp :: [t] -> [u] -> [(t,u)]
 zipp (a:as) (b:bs) = (a,b):zip as bs
 zipp _ [] = []
 zipp [] _ = []
+
+-- Compreensões de listas
+doubleList xs = [2*a|a <- xs]
+doubleIfEven xs = [2*a|a <- xs, isEven a] 
