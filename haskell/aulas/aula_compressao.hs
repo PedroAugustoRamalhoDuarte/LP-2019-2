@@ -32,3 +32,6 @@ borrowed db bookTitle
 
 numBorrowed :: Database -> Person -> Int
 numBorrowed xs pessoa = sum [1 | (nome, livro) <- xs, nome == pessoa]
+
+returnLoan :: Database -> Person -> Book -> Database
+returnLoan db person book = [a | a <- db, (person, book) /= a]
