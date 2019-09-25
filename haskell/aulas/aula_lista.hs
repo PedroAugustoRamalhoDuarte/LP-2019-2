@@ -21,6 +21,11 @@ zipp (a:as) (b:bs) = (a,b):zip as bs
 zipp _ [] = []
 zipp [] _ = []
 
+maior :: [Int] -> Int
+maior[x] = x
+maior (x:xs) | (x > maior xs) = x
+             | otherwise = maior xs
+
 -- Compreensões de listas
-doubleList xs = [2*a|a <- xs]
-doubleIfEven xs = [2*a|a <- xs, isEven a] 
+-- doubleList xs = [2*a|a <- xs]
+-- doubleIfEven xs = [2*a|a <- xs, isEven a] 
